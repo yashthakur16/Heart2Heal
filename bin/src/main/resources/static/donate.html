@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate an Organ</title>
+  <link rel="stylesheet" href="assets/donate.css">
+</head>
+<body>
+  <div class="columns-container">
+    <!-- Left Column: Donation Form -->
+    <div class="left-column">
+      <div class="form-container">
+        <h2>Donate an Organ</h2>
+        <form id="donateForm">
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" rows="2" required></textarea>
+
+          <label for="organType">Select Organ:</label>
+          <select id="organType" name="organType" required>
+            <option value="Kidney">Kidney</option>
+            <option value="Liver">Liver</option>
+            <option value="Heart">Heart</option>
+            <option value="Lungs">Lungs</option>
+          </select>
+
+          <label for="bloodType">Select Blood Type:</label>
+          <select id="bloodType" name="bloodType" required>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+          </select>
+
+          <label for="medicalHistory">Medical History:</label>
+          <textarea id="medicalHistory" name="medicalHistory" rows="3" required></textarea>
+
+          <label for="lifestyleHabits">Lifestyle Habits:</label>
+          <textarea id="lifestyleHabits" name="lifestyleHabits" rows="3" required></textarea>
+
+          <label for="emergencyContact">Emergency Contact:</label>
+          <input type="text" id="emergencyContact" name="emergencyContact" required>
+
+          <label>
+            <input type="checkbox" id="legalConsent" name="legalConsent" required>
+            I agree to the legal terms and consent to organ donation.
+          </label>
+
+          <button type="submit">Submit Donation</button>
+        </form>
+        <!-- Chat Button -->
+        <button class="chat-btn" onclick="openChat()">Chat with Recipient</button>
+      </div>
+    </div>
+    
+    <!-- Right Column: Information -->
+    <div class="right-column">
+      <div class="info-container">
+        <h2>Why Donate?</h2>
+        <p>Organ donation saves lives. By donating, you're giving someone a second chance at life.</p>
+        <p>Your selfless act can have a lasting impact on individuals and communities.</p>
+        <img src="assets/donation-illustration.png" alt="Donate Illustration">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/donate.js"></script>
+</body>
+</html>

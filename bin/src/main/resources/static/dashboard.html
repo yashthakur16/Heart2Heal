@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Organ Donation</title>
+  <link rel="stylesheet" href="assets/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <nav class="dashboard-navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Heart2Heal</a>
+      <ul class="nav-links">
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="donations.html">Donations</a></li>
+        <li><a href="requests.html">Requests</a></li>
+      </ul>
+      <div class="nav-actions">
+        <!-- Notification Icon with Dropdown (listener attached to wrapper) -->
+        <div class="notification-wrapper" id="notificationWrapper">
+          <i class="fa-solid fa-bell" id="notificationIcon"></i>
+          <span class="notification-count" id="notificationCount">3</span>
+          <div class="notification-dropdown" id="notificationDropdown">
+            <ul id="notificationList">
+              <li>New donation request received</li>
+              <li>Organ match found</li>
+              <li>Donation status updated</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Profile Avatar with Dropdown -->
+        <div class="profile-wrapper">
+          <img src="assets/avatar.png" alt="Profile Avatar" class="avatar" id="profileAvatar">
+          <div class="profile-dropdown" id="profileDropdown">
+            <a href="chat.html">Chat</a>
+            <a href="#" id="logoutLink">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Main Dashboard Content -->
+  <div class="dashboard-container">
+    <!-- Welcome & Overview Section -->
+    <section class="overview">
+      <h1>Welcome, <span id="username">User Name</span></h1>
+      <p>Role: <span id="userRole">USER ROLE</span></p>
+      <p class="overview-tagline">Here’s a quick overview of Indias donation activity and impact.</p>
+    </section>
+
+    <!-- Dashboard Cards Section -->
+    <section class="cards">
+      <!-- Donor Cards -->
+      <div class="card donor-card">
+        <h3>Total Donations</h3>
+        <p id="totalDonations">0</p>
+      </div>
+      <div class="card donor-card">
+        <h3>Pending Donations</h3>
+        <p id="pendingDonations">0</p>
+      </div>
+      <div class="card donor-card">
+        <h3>Lives Saved</h3>
+        <p id="livesSaved">0</p>
+      </div>
+      <!-- Recipient Cards -->
+      <div class="card recipient-card">
+        <h3>Active Requests</h3>
+        <p id="activeRequests">0</p>
+      </div>
+      <div class="card recipient-card">
+        <h3>Request Updates</h3>
+        <p id="requestUpdates">0</p>
+      </div>
+      <div class="card recipient-card">
+        <h3>Estimated Wait Time</h3>
+        <p id="waitTime">N/A</p>
+      </div>
+    </section>
+
+    <!-- Quick Action Shortcuts Section -->
+    <section class="quick-actions">
+      <!-- Donor Actions -->
+      <div class="quick-action donor-action">
+        <button onclick="window.location.href='donate.html'">
+          <i class="fa-solid fa-hand-holding-medical"></i> Donate an Organ
+        </button>
+        <button onclick="window.location.href='donor_status.html'">
+          <i class="fa-solid fa-chart-line"></i> Check Donation Status
+        </button>
+      </div>
+      <!-- Recipient Actions -->
+      <div class="quick-action recipient-action">
+        <button onclick="window.location.href='request_organ.html'">
+          <i class="fa-solid fa-hands-helping"></i> Request an Organ
+        </button>
+        <button onclick="window.location.href='recipient_status.html'">
+          <i class="fa-solid fa-chart-line"></i> Check Request Status
+        </button>
+      </div>
+    </section>
+
+    <!-- Additional Resources / Info Section -->
+    <section class="resources">
+      <h2>Helpful Resources</h2>
+      <ul>
+        <li><a href="faq.html">FAQs</a></li>
+        <li><a href="guidelines.html">Donation Guidelines</a></li>
+        <li><a href="tips.html">Tips for a Successful Donation</a></li>
+      </ul>
+    </section>
+  </div>
+  
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

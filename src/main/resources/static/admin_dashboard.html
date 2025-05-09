@@ -1,0 +1,100 @@
+<!-- adminDashboard.html - Fully Updated HTML with Hospital Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Organ Donation</title>
+  <link rel="stylesheet" href="assets/admin_dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+  <style>
+    .hospital-box {
+      background-color: #f0f8ff;
+      border: 1px solid #aaa;
+      padding: 16px;
+      margin: 20px 0;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="admin-navbar">
+    <div class="nav-container">
+      <a href="adminDashboard.html" class="nav-logo">Heart2Heal</a>
+      <ul class="nav-links">
+        <li><a href="adminDashboard.html">Dashboard</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="profile-wrapper">
+          <img src="admin.png" alt="Admin Avatar" class="avatar" id="profileAvatar">
+          <div class="profile-dropdown" id="profileDropdown">
+            <a href="profile.html">My Profile</a>
+            <a href="#" id="logoutLink">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="admin-dashboard-container">
+    <section class="overview">
+      <h1>Welcome, <span id="adminName" style="color:black">Admin Name</span></h1>
+      <div class="metrics">
+        <div class="metric-card">
+          <h3>Pending Donor Verifications</h3>
+          <p id="pendingDonorCount">0</p>
+        </div>
+        <div class="metric-card">
+          <h3>Pending Recipient Verifications</h3>
+          <p id="pendingRecipientCount">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="verification-requests">
+      <div class="request-panel" id="donorRequests">
+        <h2>Donor Verification Requests</h2>
+      </div>
+      <div class="request-panel" id="recipientRequests">
+        <h2>Recipient Verification Requests</h2>
+      </div>
+    </section>
+
+    <section class="registered-users">
+      <div class="users-table-card">
+        <h2>Registered Users</h2>
+        <div class="table-container">
+          <table id="registeredUsersTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent-activity">
+      <h2>Recent Activity</h2>
+      <ul id="activityLog"></ul>
+    </section>
+
+    <!-- ✅ Hospital Match Display -->
+    <section id="matchHospitalSection">
+      <h3>Match Found - Hospital Assigned</h3>
+      <div id="matchHospitalInfo" class="hospital-box"></div>
+    </section>
+  </div>
+
+  <script src="js/admin_dashboard.js"></script>
+</body>
+</html>

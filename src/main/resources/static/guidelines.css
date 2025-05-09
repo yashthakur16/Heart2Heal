@@ -1,0 +1,46 @@
+/* guidelines.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container {
+    max-width: 800px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
+    text-align: left;
+}
+h1 {
+    text-align: center;
+    color: #0056b3;
+    font-size: 28px;
+    background: #e6f2ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+}
+p {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+    margin-top: 20px;
+}
+ul {
+    background: #e6f2ff;
+    padding: 15px;
+    border-radius: 5px;
+    list-style-type: square;
+    margin: 10px 0;
+}
+li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}

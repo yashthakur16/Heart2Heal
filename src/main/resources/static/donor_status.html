@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Status</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Donation Status</h2>
+        <div id="donorStatus" class="status-box">Loading...</div>
+
+        <h3>Matching Updates</h3>
+        <div id="matchingUpdates" class="status-box">Loading...</div>
+        
+        <a href="downloadcertificate.html" class="btn">Download Certificate</a>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="js/donor_status.js"></script>
+</body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background: linear-gradient(315deg, #FCE4EC, #F48FB1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 400px;
+    }
+    h2, h3 {
+        color: #D81B60;
+        margin-bottom: 15px;
+    }
+    .status-box {
+        background: #F8BBD0;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        color: #880E4F;
+        font-weight: bold;
+    }
+    .btn {
+        display: inline-block;
+        background: #D81B60;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    .btn:hover {
+        background: #880E4F;
+    }
+    .logout-btn {
+        background: #E91E63;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.3s;
+    }
+    .logout-btn:hover {
+        background: #C2185B;
+    }
+</style>

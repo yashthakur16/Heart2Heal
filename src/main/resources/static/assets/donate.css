@@ -1,0 +1,117 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background: linear-gradient(315deg, #F8F5F7, #EF86BA);
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Two-Column Layout */
+  .columns-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+  .left-column,
+  .right-column {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Form Container (Left Column) */
+  .form-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: 500;
+  }
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container input[type="tel"],
+  .form-container input[type="date"],
+  .form-container select,
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #333;
+  }
+  .form-container input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  .form-container button[type="submit"] {
+    width: 100%;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .form-container button[type="submit"]:hover {
+    background: #0056b3;
+  }
+  
+  /* Chat Button */
+  .chat-btn {
+    margin-top: 20px;
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .chat-btn:hover {
+    background: #1e7e34;
+  }
+  
+  /* Right Column: Info Container */
+  .right-column {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .info-container h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .info-container p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  .info-container img {
+    max-width: 100%;
+    border-radius: 5px;
+    display: block;
+    margin-top: 10px;
+  }
+  

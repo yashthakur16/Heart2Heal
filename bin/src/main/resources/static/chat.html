@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="assets/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Sidebar: User List -->
+        <div class="user-list">
+            <h3>Chats</h3>
+            <div id="userList"></div>
+        </div>
+
+        <!-- Chat Window -->
+        <div class="chat-box">
+            <div class="chat-header">
+                <h3 id="chatHeader">Select a user</h3>
+            </div>
+            <div id="chatWindow" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Type your message..." />
+                <button id="sendMessage">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(315deg, #F8F5F7, #EF86BA);
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background: linear-gradient(315deg, #EF86BA, #F8F5F7);
+    padding: 10px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  /* Main Container */
+  .container {
+    display: flex;
+    width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+  
+  /* Left Side - Image */
+  .left {
+    flex: 1;
+    background: url('../loginbg.png') no-repeat Left/cover;
+  }
+  
+  /* Right Side - Form */
+  .right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .right h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .right p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  .input-box input:focus {
+    border-color: #EF86BA;
+  }
+  
+  .sign-in-btn {
+    margin-top: 20px;
+    background: #007BFF;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .sign-in-btn:hover {
+    background: #0056b3;
+  }
+  
+  .right p {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  
+  .right p a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Adjust navbar padding */
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  /* Stack nav-menu items vertically for better accessibility */
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  /* Make the container full width and stack the sides vertically */
+  .container {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  /* Adjust left section height for mobile view */
+  .left {
+    height: 200px;
+    background-position: center;
+  }
+  
+  /* Reduce padding on the right section */
+  .right {
+    padding: 20px;
+  }
+  
+  /* Reduce font sizes for headings and paragraphs if needed */
+  .right h2 {
+    font-size: 24px;
+  }
+  
+  .right p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustments for smaller devices */
+  .navbar {
+    padding: 10px;
+  }
+  
+  .nav-logo {
+    font-size: 20px;
+  }
+  
+  .nav-menu li a {
+    font-size: 14px;
+  }
+  
+  .right {
+    padding: 15px;
+  }
+  
+  .right h2 {
+    font-size: 22px;
+  }
+  
+  .sign-in-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

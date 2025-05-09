@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching System</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<style>
+    /* assets/styles.css */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #fff5f9;
+    background-image: url('https://transparenttextures.com/patterns/soft-pink-paper.png');
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #8b005d;
+}
+
+.container {
+    background-color: rgba(255, 250, 252, 0.98);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(219, 112, 147, 0.15);
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid #ffd6e7;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, #ffb6c1, #ff69b4, #db7093);
+}
+
+h2 {
+    text-align: center;
+    color: #d63384;
+    margin-bottom: 30px;
+    font-size: 32px;
+    position: relative;
+    z-index: 1;
+}
+
+h2::before {
+    content: "❤";
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    font-size: 24px;
+    color: rgba(255, 182, 193, 0.6);
+}
+
+h2::after {
+    content: "❤";
+    position: absolute;
+    right: -15px;
+    bottom: -15px;
+    font-size: 24px;
+    color: rgba(255, 182, 193, 0.6);
+}
+
+h3 {
+    color: #c71585;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #ffb6c1;
+    display: inline-block;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    background: linear-gradient(135deg, #ff69b4, #ff8fab);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 40px;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.3s;
+}
+
+button:hover::after {
+    left: 120%;
+}
+
+#matchesList {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #ffd6e7;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.1);
+    margin: 20px 0;
+    min-height: 100px;
+}
+
+.match-card {
+    background: linear-gradient(135deg, #fff5f9, #fff);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #ff69b4;
+    box-shadow: 0 3px 10px rgba(255, 182, 193, 0.1);
+    transition: all 0.3s ease;
+}
+
+.match-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.2);
+}
+
+.animation-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.heart-animation {
+    font-size: 60px;
+    color: #ff69b4;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.1); }
+    50% { transform: scale(1); }
+    75% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pink-bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: rgba(255, 182, 193, 0.2);
+    border-radius: 50%;
+    animation: rise 10s infinite ease-in;
+}
+
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
+}
+
+.bubble:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 35%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.bubble:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    animation-duration: 6s;
+    animation-delay: 0.5s;
+}
+
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        bottom: 1000px;
+        transform: translateX(-100px);
+    }
+}
+
+</style>
+
+<body>
+    <div class="container">
+        <h2>Find a Match</h2>
+
+        <button onclick="findMatches()">Find Matches</button>
+
+        <h3>Matched Donors</h3>
+        <div id="matchesList"></div>
+
+        <button onclick="logout()">Logout</button> 
+    </div>
+
+    <div class="pink-bubbles">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+    
+    <div class="animation-container">
+        <div class="heart-animation">❤</div>
+    </div>
+
+    <script src="js/matching.js"></script>
+</body>
+</html>

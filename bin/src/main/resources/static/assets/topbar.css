@@ -1,0 +1,140 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background: linear-gradient(315deg, #F8F5F7, #EF86BA);
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Top Navigation Bar */
+  .dashboard-navbar {
+    background: linear-gradient(315deg, #F8F5F7, #EF86BA);
+    padding: 10px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  .nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+  }
+  .nav-actions {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Notification Icon & Dropdown */
+  .notification-wrapper {
+    position: relative;
+    cursor: pointer;
+  }
+  .notification-wrapper i {
+    font-size: 20px;
+    color: #000;
+  }
+  .notification-count {
+    background: red;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+  }
+  .notification-dropdown {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 250px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 1000;
+  }
+  .notification-dropdown ul {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 10px;
+    margin: 0;
+  }
+  .notification-dropdown ul li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 14px;
+    color: #333;
+  }
+  .notification-dropdown ul li:last-child {
+    border-bottom: none;
+  }
+  
+  /* Profile Avatar & Dropdown */
+  .profile-wrapper {
+    position: relative;
+    cursor: pointer;
+  }
+  .avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .profile-dropdown {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 150px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 1000;
+  }
+  .profile-dropdown a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+  }
+  .profile-dropdown a:hover {
+    background: #f0f0f0;
+  }
+  
+  /* Dashboard Content (Demo) */
+  .dashboard-content {
+    text-align: center;
+    color: #333;
+  }
+  

@@ -1,0 +1,24 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definition -->
+    <linearGradient id="organGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffcccc; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff6666; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background gradient -->
+  <rect width="1024" height="1024" fill="url(#organGradient)" />
+
+  <!-- Semi-transparent heart shape -->
+  <path d="M512,700 
+           C400,600 300,500 300,350 
+           C300,220 400,150 512,250 
+           C624,150 724,220 724,350 
+           C724,500 624,600 512,700 Z" 
+        fill="#ffffff" opacity="0.2" />
+
+  <!-- Subtle heartbeat waveform -->
+  <polyline points="100,500 200,450 250,550 300,400 350,450 400,500 500,450 550,500 700,460 800,500"
+            stroke="#ffffff" stroke-width="4" fill="none" opacity="0.3" />
+</svg>

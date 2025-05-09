@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    padding-left: 150px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4ff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+    box-shadow: 8px 3px 10px black;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .user-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  
+  .role-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    background: #ddd;
+    border-radius: 6px;
+    margin: 0 2px;
+  }
+  
+  .role-btn.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .terms {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  .terms input {
+    margin-right: 5px;
+  }
+  
+  button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  .login-text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  #registerForm {
+    padding-right: 10px;
+  }
+  

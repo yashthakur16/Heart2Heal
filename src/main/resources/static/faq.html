@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organ Donation FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+            text-align: center;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .faq {
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ff99cc;
+            padding-bottom: 10px;
+        }
+        .faq button {
+            width: 100%;
+            background: #ff66b2;
+            border: none;
+            text-align: left;
+            padding: 15px;
+            font-size: 18px;
+            cursor: pointer;
+            outline: none;
+            transition: 0.3s;
+            color: white;
+            border-radius: 5px;
+        }
+        .faq button:hover {
+            background-color: #ff3385;
+        }
+        .answer {
+            display: none;
+            padding: 10px;
+            background-color: #ffe6f2;
+            border-left: 4px solid #ff66b2;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913975.png" alt="Organ Donation Icon">
+        <h1>Frequently Asked Questions (FAQ)</h1>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">What is organ donation?</button>
+            <div class="answer">Organ donation is the process of giving an organ or tissue to a person in need of a transplant. It can be done by a living donor or after death.</div>
+        </div>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">Who can become an organ donor?</button>
+            <div class="answer">Anyone, regardless of age or medical history, can register as an organ donor. However, the suitability of organs is determined at the time of donation.</div>
+        </div>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">Which organs and tissues can be donated?</button>
+            <div class="answer">The most commonly donated organs include the heart, liver, kidneys, lungs, pancreas, and intestines. Tissues such as corneas, skin, bones, and heart valves can also be donated.</div>
+        </div>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">Does organ donation affect funeral arrangements?</button>
+            <div class="answer">No, organ donation does not disfigure the body, allowing for traditional funeral arrangements, including open-casket funerals.</div>
+        </div>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">Does my religion support organ donation?</button>
+            <div class="answer">Most major religions encourage or permit organ donation as an act of charity and saving lives. It’s advisable to check with your religious leader if you have concerns.</div>
+        </div>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">Is there a cost for organ donation?</button>
+            <div class="answer">No, donors and their families are not responsible for any costs related to organ donation. The transplant recipient's insurance or government healthcare programs typically cover these expenses.</div>
+        </div>
+        
+        <div class="faq">
+            <button onclick="toggleAnswer(this)">How do I become an organ donor?</button>
+            <div class="answer">You can register as an organ donor through your country's national registry, driver’s license offices, or organ donation organizations.</div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(button) {
+            let answer = button.nextElementSibling;
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
